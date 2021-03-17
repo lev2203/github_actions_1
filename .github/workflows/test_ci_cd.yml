@@ -10,7 +10,7 @@ on:
 
 jobs:
   my_test:
-    runs-on: ubuntu-latestWWW
+    runs-on: ubuntu-latest
     steps:
     - name: Print Hello Test
       run : echo "Hello Test"
