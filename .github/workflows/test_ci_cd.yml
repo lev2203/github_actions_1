@@ -1,4 +1,7 @@
 name: Test-CI
+env: 
+  APPLICATION_NAME    : "MyFlask"
+  DEPLOY_PACKAGE_NAME : "flask-deploy-ver-${{ github.sha }}"
 
 on: 
   push:
@@ -11,6 +14,12 @@ jobs:
     steps:
     - name: Print Hello Test
       run : echo "Hello Test"
+      
+    - name: Execure few commands
+      run : |
+        echo "Hello Message1"
+        echo "Hello Message2"
+        echo "Appication name: ${{ env.APPLICATION_NAME }}"
     
   my_deploy: 
     runs-on: ubuntu-latest
@@ -19,3 +28,9 @@ jobs:
     steps:
     - name: Print Hello Deploy
       run : echo "Hello Deploy"
+      
+    - name: Printing Deployment package
+      run : echo "Deplyo pakcage name is ${{ env.DEPLOY_PACKAGE_NAME }}"
+    
+    
+    
