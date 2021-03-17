@@ -1,0 +1,19 @@
+name: Test-CI
+
+on: 
+  push:
+    branches: 
+      - main
+
+jobs:
+  my_test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello Test
+      run : echo "Hello Test"
+    
+  my_deploy: 
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello Deploy
+      run : echo "Hello Deploy"
