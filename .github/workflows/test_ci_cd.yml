@@ -39,7 +39,7 @@ jobs:
     
     steps:
     - name: Print Hello Deploy
-      run : echo "Hello Deploy"
+      run : echo "Hello Deploy1"
       
     - name: Print evn vars
       run : |
